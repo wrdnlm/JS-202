@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="./base.css">
+  <style>
+    .cards {
+      padding: 10px 20px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 40px;
+    }
+
+    .card img {
+      padding: 10px;
+      background-color: white;
+      border-radius: 10px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .modal-outer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      display: none;
+      padding-bottom: 100px;
+      overflow: auto;
+    }
+    
+    .modal-inner {
+      background-color: rgb(255, 255, 255);
+      margin: 80px auto 0;
+      width: 60%;
+      max-height: 0;
+      border-radius: 10px;
+      transition: all 400ms ease;
+      overflow: hidden;
+    }
+
+    .modal-inner img {
+      width: 100%;
+    }
+
+    .modal-inner.padded {
+      padding: 30px;
+      max-height: 1000px;
+    }
+
+    .modal-outer.show {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cards">
+    <div class="card" data-description="Wes is cool">
+      <img src="https://picsum.photos/200" alt="Wes Bos">
+      <h2>Wes Bos</h2>
+      <button>Learn more →</button>
+    </div>
+    <div class="card" data-description="Scott is neat!">
+      <img src="https://picsum.photos/200" alt="Wes Bos">
+      <h2>Scott Tolinski</h2>
+      <button>Learn more →</button>
+    </div>
+    <div class="card" data-description="Kait is beautiful!">
+      <img src="https://picsum.photos/200" alt="Wes Bos">
+      <h2>Kait Bos</h2>
+      <button>Learn more →</button>
+    </div>
+    <div class="card" data-description="Snickers is a dog!">
+      <img src="https://picsum.photos/200" alt="Wes Bos">
+      <h2>Snickers the dog</h2>
+      <button>Learn more →</button>
+    </div>
+
+  </div>
+
+  <div class="modal-outer">
+    <div class="modal-inner">
+
+    </div>
+  </div>
+  <script src="./click-outside.js"></script>
+</body>
+
+</html>
